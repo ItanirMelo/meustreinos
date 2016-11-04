@@ -10,8 +10,7 @@ package model;
  * @author Itanir
  */
 public class Aluno {
-    private String nomeAluno, cpfAluno, enderecoAluno;
-    private float peso, altura;
+    private String nomeAluno, cpfAluno;
 
     public String getNomeAluno() {
         return nomeAluno;
@@ -27,29 +26,5 @@ public class Aluno {
 
     public void setCpfAluno(String cpfAluno) {
         this.cpfAluno = cpfAluno;
-    }
-
-    public String getEnderecoAluno() {
-        return enderecoAluno;
-    }
-
-    public void setEnderecoAluno(String enderecoAluno) {
-        this.enderecoAluno = enderecoAluno;
-    }
-
-    public float getPeso() {
-        return peso;
-    }
-
-    public void setPeso(float peso) {
-        this.peso = peso;
-    }
-
-    public float getAltura() {
-        return altura;
-    }
-
-    public void setAltura(float altura) {
-        this.altura = altura;
     }
 }

@@ -10,7 +10,7 @@ package model;
  * @author Itanir
  */
 public class Serie {
-    private String descricaoSerie, equipamentoSerie, aplicacaoSerie, imagemEquipamento ;
+    private String descricaoSerie, aplicacaoSerie, imagemExercicio;
 
     public String getDescricaoSerie() {
         return descricaoSerie;
@@ -18,14 +18,6 @@ public class Serie {
 
     public void setDescricaoSerie(String descricaoSerie) {
         this.descricaoSerie = descricaoSerie;
-    }
-
-    public String getEquipamentoSerie() {
-        return equipamentoSerie;
-    }
-
-    public void setEquipamentoSerie(String equipamentoSerie) {
-        this.equipamentoSerie = equipamentoSerie;
     }
 
     public String getAplicacaoSerie() {
@@ -36,12 +28,16 @@ public class Serie {
         this.aplicacaoSerie = aplicacaoSerie;
     }
 
-    public String getImagemEquipamento() {
-        return imagemEquipamento;
+    public String getImagemExercicio() {
+        return imagemExercicio;
     }
 
-    public void setImagemEquipamento(String imagemEquipamento) {
-        this.imagemEquipamento = imagemEquipamento;
+    /**
+     *
+     * @param imagemExercicio
+     */
+    public void setImagemExercicio(String imagemExercicio) {
+        this.imagemExercicio = imagemExercicio;
     }
     
 }

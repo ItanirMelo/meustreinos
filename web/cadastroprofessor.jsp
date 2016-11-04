@@ -32,7 +32,8 @@
                                      <input type="radio" name= "radio" >Feminino
                                  </div>
                                  <input type="submit" class="btn btn-default" value="Salva"> 
-                                 <input type="submit" class="btn btn-default" value="Editar"> 
+                                 <input type="submit" class="btn btn-default" value="Editar">
+                                 <input type="submit" class="btn btn-default" value="Excluir"> 
                              </div>
                         </div>
                 </form>

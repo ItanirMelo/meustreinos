@@ -11,12 +11,12 @@ import java.util.List;
  *
  * @author Itanir
  */
-public interface TreinoDao <T> {
+public interface EquipamentoDao <T> {
     
-    void salvar(T tr);
+    void salvar(T s);
     List listarTodos();
-    void alterar(T tr);
-    void remover(T tr);
+    void alterar(T s);
+    void remover(T s);
     
     
 }

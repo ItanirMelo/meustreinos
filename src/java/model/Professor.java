@@ -11,31 +11,8 @@ package model;
  */
 public class Professor {
     
-    private String nomeProfessor, cpfProfessor, endereco, formacao ;
+    private String nomeProfessor;
 
-    public String getCpfProfessor() {
-        return cpfProfessor;
-    }
-
-    public void setCpfProfessor(String cpfProfessor) {
-        this.cpfProfessor = cpfProfessor;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getFormacao() {
-        return formacao;
-    }
-
-    public void setFormacao(String formacao) {
-        this.formacao = formacao;
-    }
 
     public String getNomeProfessor() {
         return nomeProfessor;
@@ -44,9 +21,4 @@ public class Professor {
     public void setNomeProfessor(String nomeProfessor) {
         this.nomeProfessor = nomeProfessor;
     }
-
-    public String getCpfprofessor() {
-        return cpfProfessor;
     }
-    
-}

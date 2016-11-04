@@ -5,35 +5,34 @@
  */
 package controle;
 
-import dao.TreinoDao;
+import dao.EquipamentoDao;
 import java.util.ArrayList;
 import java.util.List;
-import model.Treino;
+import model.Equipamento;
+import model.Equipamento;
 
 /**
  *
  * @author Itanir
  */
-public class TreinoImpl implements TreinoDao<Treino> {
+public class EquipamentoImpl implements EquipamentoDao<Equipamento> {
 
-    @Override
-    public void salvar(Treino tr) {
+    public void salvar(Equipamento s) {
     }
 
-    @Override
     public List listarTodos() {
-        List<Treino> list = new ArrayList<>();
+        List<Equipamento> list = new ArrayList<>();
         
         
         return list;
     }
 
     @Override
-    public void alterar(Treino tr) {
+    public void alterar(Equipamento s) {
     }
 
     @Override
-    public void remover(Treino tr) {
+    public void remover(Equipamento s) {
     }
     
 }

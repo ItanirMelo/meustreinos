@@ -28,7 +28,14 @@
                                      <label for="aluno"> Nome do Aluno(a)</label>
                                      <input type="text" class="form-control" id="aluno" name="aluno">
                                  </div>
+                                 <div class="form-group">
+                                     <label for="sexo"> Sexo: </label>
+                                     <input type="radio" name= "radio" >Masculino
+                                     <input type="radio" name= "radio" >Feminino
+                                 </div>
                                  <input type="submit" class="btn btn-default" value="Salvar">
+                                 <input type="submit" class="btn btn-default" value="Editar">
+                                 <input type="submit" class="btn btn-default" value="Excluir">
                              </div>
                         </div>
                 </form>
