@@ -10,6 +10,7 @@ import java.util.List;
 /**
  *
  * @author Itanir
+ * @param <T>
  */
 public interface AlunoDao <T> {
     

@@ -8,7 +8,7 @@ package controle;
 import dao.AlunoDao;
 import java.util.ArrayList;
 import java.util.List;
-import model.Aluno  ;
+import model.Aluno;
 
 /**
  *
@@ -16,11 +16,13 @@ import model.Aluno  ;
  */
 public class AlunoImpl implements AlunoDao<Aluno> {
 
-    @Override
+    public static void salvar(servlet.Aluno a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public void salvar(Aluno a) {
     }
 
-    @Override
     public List listarTodos() {
         List<Aluno> list = new ArrayList<>();
         

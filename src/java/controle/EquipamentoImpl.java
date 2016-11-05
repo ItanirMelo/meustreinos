@@ -9,7 +9,6 @@ import dao.EquipamentoDao;
 import java.util.ArrayList;
 import java.util.List;
 import model.Equipamento;
-import model.Equipamento;
 
 /**
  *
@@ -17,7 +16,7 @@ import model.Equipamento;
  */
 public class EquipamentoImpl implements EquipamentoDao<Equipamento> {
 
-    public void salvar(Equipamento s) {
+    public void salvar(Equipamento e) {
     }
 
     public List listarTodos() {
@@ -28,11 +27,11 @@ public class EquipamentoImpl implements EquipamentoDao<Equipamento> {
     }
 
     @Override
-    public void alterar(Equipamento s) {
+    public void alterar(Equipamento e) {
     }
 
     @Override
-    public void remover(Equipamento s) {
+    public void remover(Equipamento e) {
     }
     
 }

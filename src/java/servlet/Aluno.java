@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import controle.AlunoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,12 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Itanir
+ * @author lab
  */
-@WebServlet(name = "cadastroluno", urlPatterns = {"/cadastroaluno"})
+@WebServlet(name = "Aluno", urlPatterns = {"/aluno"})
 public class Aluno extends HttpServlet {
 
-    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -33,18 +33,15 @@ public class Aluno extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String aluno = request.getParameter("aluno");
-        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
+            out.println("<title>Servlet Aluno</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
-            out.println("Nome: "+aluno);
+            out.println("<h1>Servlet Aluno at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -76,7 +73,20 @@ public class Aluno extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //recupera as informações da pagina aluno.jsp
+        int idAluno = Integer.valueOf(request.getParameter("Aluno"));
+        String nomeAluno = request.getParameter("Aluno ");
+        
+        //cria o objeto para manipular e salvar no banco
+        AlunoImpl alunoImpl = new AlunoImpl();
+        
+        //popula o objeto aluno
+        Aluno a = new Aluno();
+        a.setNome(nomeAluno);
+
+        //retorna para tela de cadastro
+        response.sendRedirect("Aluno.jsp");
+        
     }
 
     /**
@@ -88,5 +98,13 @@ public class Aluno extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private void setNome(String nomeAluno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private Object getAluno() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

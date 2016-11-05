@@ -23,8 +23,8 @@
                          <div class="panel panel-default">
                              <div class="panel-body">
                                  <div class="form-group">
-                                     <label for="aluno"> Nome do Professor(a)</label>
-                                     <input type="text" class="form-control" id="aluno" name="aluno">
+                                     <label for="professor"> Nome do Professor(a)</label>
+                                     <input type="text" class="form-control" id="professor" name="professor">
                                  </div>
                                  <div class="form-group">
                                      <label for="sexo"> Sexo: </label>

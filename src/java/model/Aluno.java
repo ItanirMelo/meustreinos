@@ -10,7 +10,7 @@ package model;
  * @author Itanir
  */
 public class Aluno {
-    private String nomeAluno, cpfAluno;
+    private String nomeAluno, sexo;
 
     public String getNomeAluno() {
         return nomeAluno;
@@ -20,11 +20,17 @@ public class Aluno {
         this.nomeAluno = nomeAluno;
     }
 
-    public String getCpfAluno() {
-        return cpfAluno;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setCpfAluno(String cpfAluno) {
-        this.cpfAluno = cpfAluno;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
+
+    public String getAluno() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }
