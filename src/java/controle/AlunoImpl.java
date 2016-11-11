@@ -16,7 +16,7 @@ import model.Aluno;
  */
 public class AlunoImpl implements AlunoDao<Aluno> {
 
-    public static void salvar(servlet.Aluno a) {
+    public static void salvar(servlet.AlunoSerflet a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

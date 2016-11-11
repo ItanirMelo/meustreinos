@@ -14,12 +14,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Aluno;
+
 /**
  *
  * @author lab
  */
-@WebServlet(name = "Aluno", urlPatterns = {"/aluno"})
-public class Aluno extends HttpServlet {
+@WebServlet(name = "Aluno", urlPatterns = {"/alunoservlet"})
+public class AlunoSerflet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -74,18 +76,20 @@ public class Aluno extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //recupera as informações da pagina aluno.jsp
-        int idAluno = Integer.valueOf(request.getParameter("Aluno"));
-        String nomeAluno = request.getParameter("Aluno ");
+        //int idAluno = Integer.valueOf(request.getParameter("aluno"));
+        String nomeAluno = request.getParameter("aluno");
         
         //cria o objeto para manipular e salvar no banco
         AlunoImpl alunoImpl = new AlunoImpl();
         
         //popula o objeto aluno
         Aluno a = new Aluno();
-        a.setNome(nomeAluno);
+        a.setNomeAluno(nomeAluno);
+        
+        alunoImpl.salvar(a);
 
         //retorna para tela de cadastro
-        response.sendRedirect("Aluno.jsp");
+        response.sendRedirect("cadastroaluno.jsp");
         
     }
 
@@ -99,12 +103,5 @@ public class Aluno extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private void setNome(String nomeAluno) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private Object getAluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }

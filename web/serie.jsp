@@ -14,24 +14,19 @@
         <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- bootstrap theme -->
         <link href="bootstrap-3.3.7-dist/css/bootstrap.theme.min.css" rel="stylesheet">
-          <title>Cadastro de Aluno</title>
+          <title>Cadastro de Serie</title>
     </head>
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1> Cadastro de Aluno(a) </h1>
-                <form action="alunoservlet" method="post">
+                <h1> Cadastro de Serie </h1>
+                <form action="servlet" method="post">
                     <div class="col-sm-5"
                          <div class="panel panel-default">
                              <div class="panel-body">
                                  <div class="form-group">
-                                     <label for="aluno"> Nome do Aluno(a)</label>
-                                     <input type="text" class="form-control" id="aluno" name="aluno">
-                                 </div>
-                                 <div class="form-group">
-                                     <label for="sexo"> Sexo: </label>
-                                     <input type="radio" name= "radio" >Masculino
-                                     <input type="radio" name= "radio" >Feminino
+                                     <label for="desc_serie"> Descrição da Serie</label>
+                                     <input type="text" class="form-control" id="desc_serie" name="desc_serie">
                                  </div>
                                  <input type="submit" class="btn btn-default" value="Salvar">
                                  <input type="submit" class="btn btn-default" value="Editar">
