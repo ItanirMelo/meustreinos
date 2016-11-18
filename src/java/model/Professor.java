@@ -12,7 +12,7 @@ package model;
 public class Professor {
     
     private String nomeProfessor;
-
+    private int idProfessor;
 
     public String getNomeProfessor() {
         return nomeProfessor;
@@ -20,5 +20,13 @@ public class Professor {
 
     public void setNomeProfessor(String nomeProfessor) {
         this.nomeProfessor = nomeProfessor;
+    }
+
+    public int getIdProfessor() {
+        return idProfessor;
+    }
+
+    public void setIdProfessor(int idProfessor) {
+        this.idProfessor = idProfessor;
     }
     }

@@ -42,7 +42,7 @@ public class AlunoImpl implements AlunoDao {
         }
     }
 
-    public void atualizar(Aluno a) {
+    public void alterar(Aluno a) {
         String sql = "UPDATE aluno set nome =?, id = ?, sexo=?";
         try {
             stmt = conn.prepareStatement(sql);
@@ -55,9 +55,8 @@ public class AlunoImpl implements AlunoDao {
             Logger.getLogger(AlunoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
   
-    public void remover(Aluno a) {
+    public void Excluir(Aluno a) {
         String sql = "DELETE FROM aluno WHERE id = ?";
         try {
             stmt = conn.prepareStatement(sql);

@@ -10,14 +10,14 @@ package model;
  * @author Itanir
  */
 public class Equipamento {
-    private String descricaoEquipamento, imagem, musculo;
+    private String  desc_equipamento, imagem, musculo;
 
-    public String getDescricaoEquipamento() {
-        return descricaoEquipamento;
+    public String getDesc_equipamento() {
+        return desc_equipamento;
     }
 
-    public void setDescricaoEquipamento(String descricaoEquipamento) {
-        this.descricaoEquipamento = descricaoEquipamento;
+    public void setDesc_equipamento(String desc_equipamento) {
+        this.desc_equipamento = desc_equipamento;
     }
 
     public String getImagem() {
@@ -34,5 +34,18 @@ public class Equipamento {
 
     public void setMusculo(String musculo) {
         this.musculo = musculo;
+    }
+
+    public int getId_equipamento() {
+        return id_equipamento;
+    }
+
+    public void setId_equipamento(int id_equipamento) {
+        this.id_equipamento = id_equipamento;
+    }
+    private int id_equipamento;
+
+    public void setId(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
