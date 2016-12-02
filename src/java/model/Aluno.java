@@ -10,12 +10,11 @@ package model;
  * @author Itanir
  */
 public class Aluno {
-    private String nomeAluno, sexo;
+    private String nome;
+    private String sexo;
     private int idAluno;
     
     public int getIdAluno() {
-        int id;
-        id = 0;
         return idAluno;
     }
 
@@ -23,12 +22,12 @@ public class Aluno {
         this.idAluno = idAluno;
     }
 
-    public String getNomeAluno() {
-        return nomeAluno;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeAluno(String nomeAluno) {
-        this.nomeAluno = nomeAluno;
+    public void setNome(String nomeAluno) {
+        this.nome = nome;
     }
 
     public String getSexo() {
@@ -38,30 +37,4 @@ public class Aluno {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
-    public String getAluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public int getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getNome() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setNome(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Object getIdaluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
 }

@@ -23,17 +23,19 @@ import model.Aluno;
  */
 public class AlunoImpl implements AlunoDao {
     
+    
     Connection conn = ConnectionFactory.getConnection();
     PreparedStatement stmt;
     ResultSet rs;
-
-    public void salvar(Aluno a) {
+    
+    @Override
+    public void salvar(int id, String nome, String sexo) {
         String sql = "INSERT INTO aluno (nome, idaluno, sexo) VALUES(?,?,?)";
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setString(1, a.getNome());
-            stmt.setInt(2, (int) a.getIdaluno());
-            stmt.setString(3, a.getSexo());
+            stmt.setString(1, nome);
+            stmt.setInt(2, id);
+            stmt.setString(3, sexo);
             
             stmt.execute();
             
@@ -42,13 +44,14 @@ public class AlunoImpl implements AlunoDao {
         }
     }
 
-    public void alterar(Aluno a) {
+    @Override
+    public void alterar(int id, String nome, String sexo) {
         String sql = "UPDATE aluno set nome =?, id = ?, sexo=?";
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setString(1, a.getNome());
-            stmt.setInt(2, (int) a.getIdaluno());
-            stmt.setString(3, a.getSexo());
+            stmt.setString(1, nome);
+            stmt.setInt(2, (int) id);
+            stmt.setString(3, sexo);
             
             stmt.execute();
         } catch (SQLException ex) {
@@ -56,11 +59,12 @@ public class AlunoImpl implements AlunoDao {
         }
     }
   
-    public void Excluir(Aluno a) {
+    @Override
+    public void remover(int id) {
         String sql = "DELETE FROM aluno WHERE id = ?";
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, a.getId());
+            stmt.setInt(1, id);
             
             stmt.execute();
             
@@ -68,17 +72,18 @@ public class AlunoImpl implements AlunoDao {
             Logger.getLogger(AlunoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    public List<Aluno> getListAll() {
-        List<Aluno> listAluno = new ArrayList<>();
+/*
+    @Override
+    public List<> listarTodos() {
+        List<> listAluno = new ArrayList<>();
         String sql = "Select id, nome, aluno from aluno order by nome";
         try {
             stmt = conn.prepareStatement(sql);
             rs  = stmt.executeQuery();
-            
+           
             while(rs.next()){
                 Aluno a = new Aluno();
-                a.setId(rs.getInt(1));
+                a.setIdAluno(rs.getInt(1));
                 a.setNome(rs.getString(2));
                 
                 listAluno.add(a);
@@ -101,9 +106,9 @@ public class AlunoImpl implements AlunoDao {
             rs = stmt.executeQuery();
             
             rs.next();
-            a.setId(rs.getInt(1));
-            a.setNome(notNull(rs.getString(2)));
-            a.setSexo(notNull(rs.getString(3)));
+            a.setIdAluno(rs.getInt(1));
+            a.setNome(rs.getString(2));
+            a.setSexo(rs.getString(3));
             
         } catch (SQLException ex) {
             Logger.getLogger(AlunoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -111,28 +116,5 @@ public class AlunoImpl implements AlunoDao {
         
         return a;
     }
-    
-    public String notNull(String msg){
-        return (msg == null? "" : msg);
-    }
-
-    @Override
-    public void salvar(Object a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List listarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void alterar(Object a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void remover(Object a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+*/
+}    

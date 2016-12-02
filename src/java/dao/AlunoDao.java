@@ -12,12 +12,12 @@ import java.util.List;
  * @author Itanir
  * @param <T>
  */
-public interface AlunoDao <T> {
+public interface AlunoDao {
     
-    void salvar(T a);
-    List listarTodos();
-    void alterar(T a);
-    void remover(T a);
+    void salvar(int id, String nome, String sexo);
+//    List listarTodos();
+    void alterar(int id, String nome, String sexo);
+    void remover(int id);
     
     
 }

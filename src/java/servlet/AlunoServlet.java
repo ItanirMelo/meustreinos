@@ -20,7 +20,7 @@ import model.Aluno;
  * @author lab
  */
 @WebServlet(name = "Aluno", urlPatterns = {"/alunoservlet"})
-public class AlunoSerflet extends HttpServlet {
+public class AlunoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,23 +31,7 @@ public class AlunoSerflet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Aluno</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Aluno at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
+    
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -58,12 +42,7 @@ public class AlunoSerflet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
+    
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -73,35 +52,24 @@ public class AlunoSerflet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //recupera as informações da pagina aluno.jsp
         //int idAluno = Integer.valueOf(request.getParameter("aluno"));
-        String nomeAluno = request.getParameter("aluno");
+        
+        
+        String id = request.getParameter("id");
+        String nome = request.getParameter("aluno");
+        String sexo = request.getParameter("sexo");
         
         //cria o objeto para manipular e salvar no banco
         AlunoImpl alunoImpl = new AlunoImpl();
-        
+    
         //popula o objeto aluno
-        Aluno a = new Aluno();
-        a.setNomeAluno(nomeAluno);
-        
-        alunoImpl.salvar(a);
+        alunoImpl.salvar(Integer.parseInt(id),nome, sexo);
 
         //retorna para tela de cadastro
         response.sendRedirect("cadastroaluno.jsp");
-        
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 
 }

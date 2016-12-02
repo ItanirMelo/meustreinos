@@ -28,6 +28,18 @@
                                      <label for="desc_serie"> Descrição da Serie</label>
                                      <input type="text" class="form-control" id="desc_serie" name="desc_serie">
                                  </div>
+                                 <div>
+                                 <label for="aparelho"> Aparelho</label>
+                                     <input type="text" class="form-control" id="aparelho" name="aparelho">
+                                 </div>
+                             <div>
+                             <label for="musculo"> Musculos</label>
+                                     <input type="text" class="form-control" id="musculo" name="musculo">
+                                 </div>
+                         <div>
+                                 <label for="repeticao"> Quantidade de repetições</label>
+                                     <input type="text" class="form-control" id="repeticao" name="repeticao">
+                                 </div>
                                  <input type="submit" class="btn btn-default" value="Salvar">
                                  <input type="submit" class="btn btn-default" value="Editar">
                                  <input type="submit" class="btn btn-default" value="Excluir">
